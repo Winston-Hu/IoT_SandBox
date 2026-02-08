@@ -64,9 +64,9 @@ EMAIL_ENABLED = True  # set True if ready
 SMTP_HOST = "mail.jdktech.com.au"
 SMTP_PORT = 465
 SMTP_USER = "support@jdktech.com.au"
-SMTP_PASS = "3.1415926Pi"  # 注意：Gmail 要用 App Password，不是登录密码
+SMTP_PASS = "3.1415926Pi"
 EMAIL_FROM = SMTP_USER
-EMAIL_SUBJECT_PREFIX = "<< Testing Cases >> SKE Houses M300 Monitor - Do not reply"
+EMAIL_SUBJECT_PREFIX = "SKE Houses M300 Monitor - Do not reply"
 EMAIL_ADDRESSES_LIST = ["winston@jdktech.com.au", "ian.gan@jdktech.com.au"]
 
 

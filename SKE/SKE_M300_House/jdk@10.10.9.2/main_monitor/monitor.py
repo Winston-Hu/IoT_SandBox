@@ -27,12 +27,12 @@ import paho.mqtt.client as mqtt
 # =========================
 # Config (edit here)
 # =========================
-MQTT_HOST = "10.10.9.2"
+MQTT_HOST = "13.238.189.183"
 MQTT_PORT = 1883
-MQTT_USERNAME = None
-MQTT_PASSWORD = None
-# MQTT_USERNAME = "test"
-# MQTT_PASSWORD = "2143test"
+# MQTT_USERNAME = None
+# MQTT_PASSWORD = None
+MQTT_USERNAME = "test"
+MQTT_PASSWORD = "2143test"
 
 TOPICS = [
     "/SKE_SOLAR/SLAVE_BECOME_0",
@@ -44,8 +44,8 @@ SERIOUS_TIMEOUT_PUB_TOPIC = "/monitor_send_sms/SERIOUS_TIMEOUT"
 SUB_QOS = 0
 KEEPALIVE = 60
 
-HEARTBEAT_INTERVAL = 3600  # seconds
-HEARTBEAT_TOLERANCE = 300  # seconds
+HEARTBEAT_INTERVAL = 600  # seconds
+HEARTBEAT_TOLERANCE = 30  # seconds
 heartbeat_history = {}  # mac -> [t1, t2, t3]
 heartbeat_last_seen = {}  # mac -> last_ts
 

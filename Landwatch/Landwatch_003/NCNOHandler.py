@@ -42,7 +42,8 @@ API_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjaGlycHN0YWNrIiwiaX
 TIMEOUT_SECONDS = 30
 FPORT = 1
 CONFIRMED = False
-PAYLOAD_LOW_HEX = '050011EA60'  # DI1 = L
+# PAYLOAD_LOW_HEX = '050011EA60'  # DI1 = L
+PAYLOAD_LOW_HEX = '030101'  # DI1 = L, no need to set relay anymore
 PAYLOAD_HIGH_HEX = '030000'  # DI1 = H or timeout
 
 
@@ -146,9 +147,9 @@ def process_status(status):
 
     with _lock:
         # if the status has not changed, do not repeat the process
-        # if status == _last_status:
-        #     return
-        # _last_status = status
+        if status == _last_status:
+            return
+        _last_status = status
 
         # cancel the old timer
         if _di_timeout_timer:
